@@ -11,7 +11,7 @@ customer_id = st.text_input("Customer ID (e.g., CUST1234)")
 if st.button("Get Recommendations"):
     with st.spinner("Fetching recommendations..."):
         try:
-            response = requests.get("http://localhost:8000/recommend", params={"customer_id": customer_id})
+            response = requests.get("https://retailrec-2.onrender.com/recommend", params={"customer_id": customer_id})
             data = response.json()
 
             if not data["data"]:
