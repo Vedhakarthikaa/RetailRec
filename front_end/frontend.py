@@ -11,7 +11,7 @@ customer_id = st.text_input("Customer ID (e.g., CUST1234)")
 if st.button("Get Recommendations"):
     with st.spinner("Fetching recommendations..."):
         try:
-            API_URL = "https://retailrec-api.onrender.com/recommend"  
+            API_URL = "https://retailrec-2.onrender.com/recommend"  
 
             response = requests.get(API_URL, params={"customer_id": customer_id})
 
